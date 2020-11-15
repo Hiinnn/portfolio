@@ -5,7 +5,7 @@ export default function LogoAnimation() {
     const timeOffeset = 0.5
     return (
         <Container>
-            <svg id="Layer_1" data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 190.67 63.92" style={{ height: 150 }}>
+            <svg id="Layer_1" data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 190.67 63.92" style={{ width: '30em', maxWidth: '40%' }}>
                 <Path id="P" transform="translate(3, -95.57)"
                     d="M27.14,113.85S23.3,149,20.06,151.38,9.14,149.2,6.49,137.59s2.43-34.54,20.65-37.83,20.57,5.74,20.57,10.17-.52,12.56-9.39,16.46-16.52,3.28-19.83,1.28" />
                 <Path id="h" transform="translate(-3.34 -90.57)" style={{ animationDelay: `${timeOffeset}s` }}
@@ -27,12 +27,13 @@ export default function LogoAnimation() {
 }
 
 const Container = styled.div`
-  height: 100vh;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  flex-direction: column;
-  background-color: #2D2D2A;
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    background-color: #2D2D2A;
 `
 
 const dash = keyframes`
@@ -41,16 +42,16 @@ const dash = keyframes`
   }
 `
 const Path = styled.path`
-  width: 10px;
-  height: 10px;
+    width: 10px;
+    height: 10px;
 
-  fill: none;
-  stroke: white;
-  stroke-width: 5px;
-  stroke-linecap: round;
-  stroke-linejoin: round;
-  stroke-dasharray: 1000;
-  stroke-dashoffset: 1000;
-  animation: ${dash} 3s  forwards;
-  transform: translate(-3.34 -90.57);
+    fill: none;
+    stroke: white;
+    stroke-width: 5px;
+    stroke-linecap: round;
+    stroke-linejoin: round;
+    stroke-dasharray: 1000;
+    stroke-dashoffset: 1000;
+    animation: ${dash} 3s  forwards;
+    transform: translate(-3.34 -90.57);
 `
