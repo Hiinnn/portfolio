@@ -1,10 +1,11 @@
 import React from 'react'
 import styled, { keyframes } from 'styled-components'
 
-export default function LogoAnimation() {
+
+export default function LogoAnimation(props) {
     const timeOffeset = 0.5
     return (
-        <Container>
+        <Container top={props.top}>
             <svg id="Layer_1" data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 190.67 63.92" style={{ width: '30em', maxWidth: '40%' }}>
                 <Path id="P" transform="translate(3, -95.57)"
                     d="M27.14,113.85S23.3,149,20.06,151.38,9.14,149.2,6.49,137.59s2.43-34.54,20.65-37.83,20.57,5.74,20.57,10.17-.52,12.56-9.39,16.46-16.52,3.28-19.83,1.28" />
@@ -19,7 +20,7 @@ export default function LogoAnimation() {
                 <Path id="a-2" data-name="a" transform="translate(-3.34 -90.57)" style={{ animationDelay: `${timeOffeset * 5}s` }}
                     d="M170.89,137.77s-1.29-4,3.31-9.93,9.79-6.46,9.79-6.46c1.85-.19,1.64.37,1.71.83-1.61,2.46-5.18,2.41-7.68,3.33,0,0-2.27,1.42-4.36,6s-1.56,2.39-1.81,5.28a12.85,12.85,0,0,0,.89,6.26c.63,1.71.78,2.1,1.71,2.74s2,1,4.35.64,7.26-7.78,8.61-11.69a41.59,41.59,0,0,0,2.2-8.76c-.07-.74.44-2.25-.24-2.69s-1.37-.09-2,.93-.62,6.06-.64,6.8a40.45,40.45,0,0,0,.16,7.64,18.87,18.87,0,0,0,1.8,6,3.57,3.57,0,0,0,3.23,1.17" />
             </svg>
-            <div style={{}}>
+            <div style={{ color: "white", fontWeight: 700, fontSize: "2em" }}>
                 I want to be Web Developer
             </div>
         </Container >
@@ -27,13 +28,14 @@ export default function LogoAnimation() {
 }
 
 const Container = styled.div`
-    width: 100vw;
+    max-width: 100vw;
     height: 100vh;
     display: flex;
     align-items: center;
     justify-content: center;
     flex-direction: column;
     background-color: #2D2D2A;
+    transform: ${props => props.top > window.innerHeight ? `translateX(${window.innerWidth}px)` : 0};
 `
 
 const dash = keyframes`
@@ -53,5 +55,4 @@ const Path = styled.path`
     stroke-dasharray: 1000;
     stroke-dashoffset: 1000;
     animation: ${dash} 3s  forwards;
-    transform: translate(-3.34 -90.57);
 `
