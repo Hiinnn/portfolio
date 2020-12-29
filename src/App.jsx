@@ -1,12 +1,13 @@
 import React from "react";
 import Home from "./components/Home";
-import About from "./components/About";
+import { About } from "./components/About";
+import { Theme } from "./context/Theme";
 
 export default function App() {
   return (
-    <React.Fragment>
+    <Theme>
       <Home />
       <About />
-    </React.Fragment>
+    </Theme>
   );
 }

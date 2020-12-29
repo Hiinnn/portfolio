@@ -1,21 +1,17 @@
 import React from "react";
 import styled from "styled-components";
 
-export default function About() {
+export const About = () => {
   return (
     <Container>
       <Header>ABOUT ME.</Header>
       <Paragraph>
         Hi, my name is Hin and I'm currently a student at King Mongkut's
-        Institute of Technology Ladkrabang Hi, my name is Hin and I'm currently
-        a student at King Mongkut's Institute of Technology Ladkrabang Hi, my
-        name is Hin and I'm currently a student at King Mongkut's Institute of
-        Technology Ladkrabang Hi, my name is Hin and I'm currently a student at
-        King Mongkut's Institute of Technology Ladkrabang
+        Institute of Technology Ladkrabang
       </Paragraph>
     </Container>
   );
-}
+};
 
 const Container = styled.div`
   min-height: 500px;
