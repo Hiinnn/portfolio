@@ -48,6 +48,7 @@ const Title = styled.div`
   align-items: center;
   flex-direction: column;
 
+  border-radius: 5px;
   background-color: rgba(255, 255, 255, 0.1);
 
   @media screen and (max-width: 30em) {

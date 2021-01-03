@@ -1,7 +1,10 @@
 import React, { useContext, useEffect, useRef } from "react";
-import styled from "styled-components";
+
 import { ThemeContext } from "../context/Theme";
-// import { Tween } from "react-gsap";
+
+import styled from "styled-components";
+import { Container, Header } from "./styled";
+
 import { gsap } from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
 
@@ -30,7 +33,7 @@ export const About = () => {
         <h1>ABOUT&nbsp;</h1>
         <h1>ME.</h1>
       </Header>
-      <Article>
+      <Detail>
         <p>
           Welcome to my Portfolio.
           <br />
@@ -62,35 +65,12 @@ export const About = () => {
           <b>Others</b>
           <div>C, Java, Python</div>
         </Skill>
-      </Article>
+      </Detail>
     </Container>
   );
 };
 
-const Container = styled.section`
-  min-height: 100vh;
-  padding-top: 40px;
-
-  color: white;
-  font-family: "Spartan", sans-serif;
-
-  display: flex;
-  align-items: center;
-  flex-direction: column;
-`;
-
-const Header = styled.header`
-  display: flex;
-
-  h1:nth-child(1) {
-    color: white;
-  }
-  h1:nth-child(2) {
-    color: ${(props) => props.theme.main};
-  }
-`;
-
-const Article = styled.div`
+const Detail = styled.div`
   display: flex;
   flex-direction: column;
 
