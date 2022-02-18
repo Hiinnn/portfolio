@@ -24,7 +24,7 @@ export const Home = () => {
           <h1>Phansa</h1>
         </MainTitle>
         <SubTitle color={theme.text_sub}>
-          <span>Frontend </span>
+          <span>Software </span>
           <span>Developer</span>
         </SubTitle>
       </Title>
